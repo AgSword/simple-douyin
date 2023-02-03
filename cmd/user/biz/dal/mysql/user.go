@@ -9,11 +9,11 @@ const TableNameUser = "user"
 
 // User mapped from table <user>
 type User struct {
-	ID             int32     `gorm:"column:id;primaryKey" json:"id"`                // 主键id
+	ID             int64     `gorm:"column:id;primaryKey" json:"id"`                // 主键id
 	UserName       string    `gorm:"column:user_name" json:"user_name"`             // 用户名
 	Password       string    `gorm:"column:password" json:"password"`               // 密码
-	FollowingCount int32     `gorm:"column:following_count" json:"following_count"` // 关注数
-	FollowerCount  int32     `gorm:"column:follower_count" json:"follower_count"`   // 被关注数
+	FollowingCount int64     `gorm:"column:following_count" json:"following_count"` // 关注数
+	FollowerCount  int64     `gorm:"column:follower_count" json:"follower_count"`   // 被关注数
 	UpdateAt       time.Time `gorm:"column:update_at" json:"update_at"`             // 更新时间
 	CreateAt       time.Time `gorm:"column:create_at" json:"create_at"`             // 创建时间
 }
@@ -31,7 +31,7 @@ func GetUserByUsername(ctx context.Context, userName string) ([]*User, error) {
 	return res, nil
 }
 
-func GetUserByIds(ctx context.Context, userIDs []int32) ([]*User, error) {
+func GetUserByIds(ctx context.Context, userIDs []int64) ([]*User, error) {
 	res := make([]*User, 0)
 	if len(userIDs) == 0 {
 		return res, nil
