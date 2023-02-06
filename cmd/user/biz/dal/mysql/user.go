@@ -42,6 +42,10 @@ func GetUserByIds(ctx context.Context, userIDs []int64) ([]*User, error) {
 	return res, nil
 }
 
-func CreateUser(ctx context.Context, users []*User) error {
+func CreateUser(ctx context.Context, users *User) error {
 	return DB.WithContext(ctx).Create(users).Error
+}
+
+func UpdateUserPassword(ctx context.Context, user *User) error {
+	return DB.WithContext(ctx).Model(user).Where("id", user.ID).Update("password", user.Password).Error
 }

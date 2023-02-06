@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"github.com/AgSword/simple-douyin/cmd/user/conf"
+	"github.com/AgSword/simpleDouyin/cmd/user/conf"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

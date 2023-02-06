@@ -1,10 +1,13 @@
 package main
 
 import (
+	"fmt"
+	"github.com/AgSword/simpleDouyin/cmd/user/biz/dal"
+	"github.com/AgSword/simpleDouyin/pkg/jwt"
 	"net"
 
-	"github.com/AgSword/simple-douyin/cmd/user/conf"
-	"github.com/AgSword/simple-douyin/kitex_gen/user/userservice"
+	"github.com/AgSword/simpleDouyin/cmd/user/conf"
+	"github.com/AgSword/simpleDouyin/kitex_gen/user/userservice"
 	"github.com/cloudwego/kitex/pkg/klog"
 	"github.com/cloudwego/kitex/pkg/rpcinfo"
 	"github.com/cloudwego/kitex/pkg/transmeta"
@@ -13,7 +16,12 @@ import (
 	"gopkg.in/natefinch/lumberjack.v2"
 )
 
+var Jwt *jwt.JWT
+
 func main() {
+	dal.Init()
+	Jwt := jwt.NewJWT([]byte(conf.GetConf().Jwt.SignKey))
+	fmt.Println(Jwt)
 	opts := kitexInit()
 
 	svr := userservice.NewServer(new(UserServiceImpl), opts...)

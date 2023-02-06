@@ -2,10 +2,11 @@ package main
 
 import (
 	"context"
+	"github.com/AgSword/simpleDouyin/pkg/jwt"
 	"github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/codes"
 
-	"github.com/AgSword/simple-douyin/cmd/user/biz/service"
-	user "github.com/AgSword/simple-douyin/kitex_gen/user"
+	"github.com/AgSword/simpleDouyin/cmd/user/biz/service"
+	user "github.com/AgSword/simpleDouyin/kitex_gen/user"
 )
 
 // UserServiceImpl implements the last service interface defined in the IDL.
@@ -40,6 +41,13 @@ func (s *UserServiceImpl) Login(ctx context.Context, req *user.UserLoginRequest)
 		msg := "login service error"
 		return &user.UserLoginResponse{StatusCode: int32(codes.Unimplemented), StatusMsg: &msg}, nil
 	}
+	token, err := Jwt.CreateToken(jwt.CustomClaims{ID: resp.UserId})
+
+	if err != nil {
+		msg := "create token fail"
+		return &user.UserLoginResponse{StatusCode: int32(codes.Unimplemented), StatusMsg: &msg}, nil
+	}
+	resp.Token = token
 	return resp, err
 }
 
