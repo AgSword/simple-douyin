@@ -16,7 +16,6 @@ func Init() {
 	//	SkipDefaultTransaction: true,
 	//},
 	DB, err = gorm.Open(mysql.Open("root:Sss15946768062@tcp(47.100.224.26:3306)/tiktok8062?charset=utf8&parseTime=True&loc=Local"))
-	println(DB == nil)
 	if err != nil {
 		panic(err)
 	}

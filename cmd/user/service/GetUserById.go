@@ -20,7 +20,7 @@ func NewGetUserByIdService(ctx context.Context) *GetUserByIdService {
 func (s *GetUserByIdService) Run(req *user.UserRequest) (resp *user.UserResponse, err error) {
 	// Finish your business logic.
 	// 从数据库中根据id获取user数据，封装到resp中
-	ids := make([]int64, 0)
+	ids := make([]int64, 1)
 	ids[0] = req.UserId
 	users, err := mysql.GetUserByIds(s.ctx, ids)
 	if err != nil {

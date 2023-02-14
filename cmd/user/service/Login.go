@@ -40,8 +40,10 @@ func (s *LoginService) Run(req *user.UserLoginRequest) (resp *user.UserLoginResp
 	if md5_dest != users[0].Password {
 		return nil, errors.New("username or password error")
 	}
+
 	// 因为目录安排的原因，这个函数只能到判断用户名密码是否正确这一步，在handler层返回token
 	msg := "ok"
+
 	return &user.UserLoginResponse{UserId: users[0].ID, StatusMsg: &msg, StatusCode: int32(codes.OK)}, nil
 
 }
