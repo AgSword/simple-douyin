@@ -1,2 +1,9 @@
 # simple-douyin
-service层只有在正常情况下，才会返回resp，否则
+## 单元架构
+和javaee中的三层架构相似<BR>
+
+|  javaee  |     go     |
+|:--------:|:----------:|
+|   WEB层   |  handler   |
+| service层 | service文件夹 |
+|   dal层   |   dal文件夹   |
