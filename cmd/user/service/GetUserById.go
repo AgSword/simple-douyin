@@ -3,9 +3,9 @@ package service
 import (
 	"context"
 	"errors"
+	"github.com/AgSword/simpleDouyin/dal/mysql"
 	"github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/codes"
 
-	"github.com/AgSword/simpleDouyin/cmd/user/biz/dal/mysql"
 	user "github.com/AgSword/simpleDouyin/kitex_gen/user"
 )
 
@@ -30,6 +30,6 @@ func (s *GetUserByIdService) Run(req *user.UserRequest) (resp *user.UserResponse
 		return nil, errors.New("user no exist or have mul users")
 	}
 	msg := "ok"
-	userVo := user.User{Id: users[0].ID, Name: users[0].UserName, FollowCount: &users[0].FollowerCount, FollowerCount: &users[0].FollowerCount}
+	userVo := user.User{Id: users[0].ID, Name: users[0].Name, FollowCount: &users[0].FollowerCount, FollowerCount: &users[0].FollowerCount}
 	return &user.UserResponse{StatusCode: int32(codes.OK), StatusMsg: &msg, User: &userVo}, nil
 }

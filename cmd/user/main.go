@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/AgSword/simpleDouyin/cmd/user/biz/dal"
+	"github.com/AgSword/simpleDouyin/conf"
+	"github.com/AgSword/simpleDouyin/dal"
 	"github.com/AgSword/simpleDouyin/pkg/jwt"
 	"net"
 
-	"github.com/AgSword/simpleDouyin/cmd/user/conf"
 	"github.com/AgSword/simpleDouyin/kitex_gen/user/userservice"
 	"github.com/cloudwego/kitex/pkg/klog"
 	"github.com/cloudwego/kitex/pkg/rpcinfo"
