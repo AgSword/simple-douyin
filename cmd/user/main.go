@@ -20,7 +20,7 @@ var Jwt *jwt.JWT
 
 func main() {
 	dal.Init()
-	Jwt := jwt.NewJWT([]byte(conf.GetConf().Jwt.SignKey))
+	Jwt = jwt.NewJWT([]byte(conf.GetConf().Jwt.SignKey))
 	fmt.Println(Jwt)
 	opts := kitexInit()
 

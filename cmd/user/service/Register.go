@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"errors"
 	"github.com/AgSword/simpleDouyin/dal/mysql"
 	"github.com/AgSword/simpleDouyin/pkg/md5"
 	"github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/codes"
@@ -20,6 +21,13 @@ func NewRegisterService(ctx context.Context) *RegisterService {
 // Run create note info
 func (s *RegisterService) Run(req *user.UserRegisterRequest) (resp *user.UserRegisterResponse, err error) {
 	// Finish your business logic.
+	userByName, err := mysql.GetUserByUsername(s.ctx, req.Username)
+	if err != nil {
+		return nil, err
+	}
+	if userByName != nil {
+		return nil, errors.New("have mul users whose name are the same in db")
+	}
 	// 在数据库中创建用户信息,先添加用户名添加记录行，后添加密码
 	userInDb := mysql.User{Name: req.Username, FollowCount: 0, FollowerCount: 0}
 	err = mysql.CreateUser(s.ctx, &userInDb)

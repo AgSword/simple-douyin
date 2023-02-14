@@ -20,16 +20,15 @@ func NewGetUserByIdService(ctx context.Context) *GetUserByIdService {
 func (s *GetUserByIdService) Run(req *user.UserRequest) (resp *user.UserResponse, err error) {
 	// Finish your business logic.
 	// 从数据库中根据id获取user数据，封装到resp中
-	ids := make([]int64, 1)
-	ids[0] = req.UserId
-	users, err := mysql.GetUserByIds(s.ctx, ids)
+
+	users, err := mysql.GetUserByIds(s.ctx, req.UserId)
 	if err != nil {
 		return nil, err
 	}
-	if len(users) != 1 {
-		return nil, errors.New("user no exist or have mul users")
+	if users != nil {
+		return nil, errors.New("user no exist")
 	}
 	msg := "ok"
-	userVo := user.User{Id: users[0].ID, Name: users[0].Name, FollowCount: &users[0].FollowerCount, FollowerCount: &users[0].FollowerCount}
+	userVo := user.User{Id: users.ID, Name: users.Name, FollowCount: &users.FollowerCount, FollowerCount: &users.FollowerCount}
 	return &user.UserResponse{StatusCode: int32(codes.OK), StatusMsg: &msg, User: &userVo}, nil
 }

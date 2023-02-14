@@ -25,28 +25,23 @@ func (*User) TableName() string {
 	return TableNameUser
 }
 
-func GetUserByUsername(ctx context.Context, userName string) ([]*User, error) {
-	res := make([]*User, 0)
+func GetUserByUsername(ctx context.Context, userName string) (*User, error) {
+	res := &User{}
 	if err := DB.WithContext(ctx).Where("name = ?", userName).Find(&res).Error; err != nil {
 		return nil, err
 	}
 	return res, nil
 }
 
-func GetUserByIds(ctx context.Context, userIDs []int64) ([]*User, error) {
-	res := make([]*User, 0)
-	if len(userIDs) == 0 {
-		return res, nil
-	}
-	if err := DB.WithContext(ctx).Where("id in ?", userIDs).Find(&res).Error; err != nil {
+func GetUserByIds(ctx context.Context, userID int64) (*User, error) {
+	res := &User{}
+	if err := DB.WithContext(ctx).Where("id in ?", userID).Find(&res).Error; err != nil {
 		return nil, err
 	}
 	return res, nil
 }
 
 func CreateUser(ctx context.Context, users *User) error {
-	println(ctx == nil)
-	println(DB == nil)
 	return DB.WithContext(ctx).Create(users).Error
 }
 
