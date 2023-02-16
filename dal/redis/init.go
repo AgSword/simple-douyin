@@ -3,7 +3,6 @@ package redis
 import (
 	"context"
 	"github.com/AgSword/simpleDouyin/conf"
-
 	"github.com/go-redis/redis/v8"
 )
 
