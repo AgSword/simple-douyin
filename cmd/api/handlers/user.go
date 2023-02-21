@@ -7,6 +7,7 @@ import (
 	"github.com/AgSword/simpleDouyin/cmd/api/rpc"
 	// "github.com/AgSword/simple-douyin/kitex_gen/user"
 	"github.com/AgSword/simpleDouyin/kitex_gen/user"
+
 	"github.com/cloudwego/hertz/pkg/app"
 )
 
@@ -16,12 +17,12 @@ func Login(ctx context.Context, c *app.RequestContext) {
 	registerVar.PassWord = c.Query("password")
 
 	if len(registerVar.UserName) == 0 || len(registerVar.PassWord) == 0 {
-		msg := "Invalid UserName or PassWord"
+		msg := "Invalid UserName or PassWord"	
 		SendResponse(c, &user.UserLoginResponse{
-			StatusCode: int32(1),
+			StatusCode: int32(1), 
 			StatusMsg:  &msg,
-			UserId:     0,
-			Token:      "",
+			UserId:		0,
+			Token:		"",
 		})
 		return
 	}
@@ -33,14 +34,14 @@ func Login(ctx context.Context, c *app.RequestContext) {
 	if err != nil {
 		msg := "Invalid UserName or PassWord"
 		SendResponse(c, &user.UserLoginResponse{
-			StatusCode: int32(2),
+			StatusCode: int32(2), 
 			StatusMsg:  &msg,
-			UserId:     0,
-			Token:      "",
+			UserId:		0,
+			Token:		"", 
 		})
 		return
 	}
-	SendResponse(c, resp)
+	SendResponse(c, resp)	
 }
 
 func Register(ctx context.Context, c *app.RequestContext) {
@@ -51,7 +52,7 @@ func Register(ctx context.Context, c *app.RequestContext) {
 	if len(registerVar.UserName) == 0 || len(registerVar.PassWord) == 0 {
 		msg := "Invalid UserName or PassWord"
 		SendResponse(c, &user.UserRegisterResponse{
-			StatusCode: int32(1),
+			StatusCode: int32(1), 
 			StatusMsg:  &msg,
 			// UserId:		0,
 			// Token:		"",
@@ -65,15 +66,15 @@ func Register(ctx context.Context, c *app.RequestContext) {
 	if err != nil {
 		msg := "Invalid UserName or PassWord"
 		SendResponse(c, &user.UserRegisterResponse{
-			StatusCode: int32(2),
+			StatusCode: int32(2), 
 			StatusMsg:  &msg,
 			// UserId:		0,
-			// Token:		"",
+			// Token:		"", 
 		})
 		return
 	}
 	SendResponse(c, resp)
-
+	
 }
 
 func GetUserById(ctx context.Context, c *app.RequestContext) {
@@ -82,7 +83,7 @@ func GetUserById(ctx context.Context, c *app.RequestContext) {
 	if err != nil {
 		msg := "Invalid UserID"
 		SendResponse(c, &user.UserResponse{
-			StatusCode: int32(1),
+			StatusCode: int32(1), 
 			StatusMsg:  &msg,
 			// UserId:		0,
 			// Token:		"",
@@ -93,9 +94,9 @@ func GetUserById(ctx context.Context, c *app.RequestContext) {
 	userVar.Token = c.Query("token")
 
 	if len(userVar.Token) == 0 || userVar.UserId < 0 {
-		msg := "Invalid Token"
+		msg := "Invalid Token user"
 		SendResponse(c, &user.UserResponse{
-			StatusCode: int32(2),
+			StatusCode: int32(2), 
 			StatusMsg:  &msg,
 			// UserId:		0,
 			// Token:		"",
@@ -108,9 +109,9 @@ func GetUserById(ctx context.Context, c *app.RequestContext) {
 		Token:  userVar.Token,
 	})
 	if err != nil {
-		msg := "Invalid Token"
+		msg := "Invalid Token Auser"
 		SendResponse(c, &user.UserResponse{
-			StatusCode: int32(3),
+			StatusCode: int32(3), 
 			StatusMsg:  &msg,
 			// UserId:		0,
 			// Token:		"",

@@ -2,6 +2,7 @@ package rpc
 
 import (
 	"context"
+	"fmt"
 	// "fmt"
 	// "time"
 	"errors"
@@ -19,7 +20,7 @@ var userClient userservice.Client
 // func initUserRpc(Config *ttviper.Config) {
 func init() {
 
-	c, err := userservice.NewClient("User", client.WithHostPorts("127.0.0.1:8888"))
+	c, err := userservice.NewClient("User", client.WithHostPorts("127.0.0.1:7777"))
 	if err != nil {
 		panic(err)
 	}
@@ -49,6 +50,7 @@ func Login(ctx context.Context, req *user.UserLoginRequest) (resp *user.UserLogi
 		// return nil, errno.NewErrNo(int(resp.StatusCode), *resp.StatusMsg)
 		return nil, errors.New("Action Failed")
 	}
+	fmt.Println(err)
 	return resp, nil
 }
 
@@ -60,6 +62,7 @@ func GetUserById(ctx context.Context, req *user.UserRequest) (resp *user.UserRes
 	}
 	if resp.StatusCode != 0 {
 		// return nil, errno.NewErrNo(int(resp.StatusCode), *resp.StatusMsg)
+		fmt.Println(resp.StatusCode)
 		return nil, errors.New("Action Failed")
 	}
 	return resp, nil

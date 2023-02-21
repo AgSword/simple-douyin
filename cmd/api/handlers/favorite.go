@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/AgSword/simpleDouyin/cmd/api/rpc"
 	"github.com/AgSword/simpleDouyin/kitex_gen/favorite"
-	"log"
+	//"log"
 	"strconv"
 
 	"github.com/cloudwego/hertz/pkg/app"
@@ -14,19 +14,19 @@ import (
 func FavoriteAction(ctx context.Context, c *app.RequestContext) {
 	var paramVar FavoriteActionParam
 	// token := c.Query("token")
-	user_id := c.Query("user_id")
+	//user_id := c.Query("user_id")
 	video_id := c.Query("video_id")
 	action_type := c.Query("action_type")
 
 	// 如果需要在这里验证JWT
 	// 添加userid
 
-	uid, err := strconv.Atoi(user_id)
-	if err != nil {
-		log.Println(err.Error())
-		SendResponse(c, &favorite.DouyinFavoriteActionResponse{StatusCode: int32(1), StatusMsg: "Invalid UserId"})
-		return
-	}
+	//uid, err := strconv.Atoi(user_id)
+	// if err != nil {
+	// 	log.Println(err.Error())
+	// 	SendResponse(c, &favorite.DouyinFavoriteActionResponse{StatusCode: int32(1), StatusMsg: "Invalid UserId"})
+	// 	return
+	// }
 
 	vid, err := strconv.Atoi(video_id)
 	if err != nil {
@@ -41,7 +41,7 @@ func FavoriteAction(ctx context.Context, c *app.RequestContext) {
 	}
 
 	// paramVar.Token = token
-	paramVar.UserId = int64(uid)
+	//paramVar.UserId = int64(uid)
 	paramVar.VideoId = int64(vid)
 	paramVar.ActionType = int32(act)
 

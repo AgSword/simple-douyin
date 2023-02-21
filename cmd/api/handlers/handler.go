@@ -28,3 +28,9 @@ type FavoriteActionParam struct {
 	VideoId    int64  `json:"video_id,omitempty"`    // 视频id
 	ActionType int32  `json:"action_type,omitempty"` // 1-点赞，2-取消点赞
 }
+
+//视频流输入参数
+type Feedparam struct {
+	Latest_time int64  `json:"latest_time,omitempty"` // Latest_time
+	Token  string `json:"token,omitempty"`   // 用户鉴权token
+}

@@ -1,1 +1,45 @@
 {"level":"info","msg":"KITEX: server listen at addr=[::]:8888","time":"2023-02-14T06:57:16Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:8888","time":"2023-02-16T13:34:13Z"}
+{"level":"error","msg":"KITEX: processing request error, remoteService=, remoteAddr=113.2.136.111:10456, error=invalid payload (first4Bytes=0x47455420, second4Bytes=0x2f646f75)","span_id":"0000000000000000","time":"2023-02-16T13:35:06Z","trace_flags":"00","trace_id":"00000000000000000000000000000000"}
+{"level":"error","msg":"KITEX: processing request error, remoteService=, remoteAddr=127.0.0.1:53924, error=invalid payload (first4Bytes=0x47455420, second4Bytes=0x2f204854)","span_id":"0000000000000000","time":"2023-02-16T13:35:59Z","trace_flags":"00","trace_id":"00000000000000000000000000000000"}
+{"level":"error","msg":"KITEX: server listen failed, addr=:8888 error=listen tcp :8888: bind: address already in use","time":"2023-02-17T13:44:17Z"}
+{"level":"error","msg":"KITEX: server start error: error=listen tcp :8888: bind: address already in use","time":"2023-02-17T13:44:17Z"}
+{"level":"error","msg":"listen tcp :8888: bind: address already in use","time":"2023-02-17T13:44:17Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:8888","time":"2023-02-17T13:45:06Z"}
+{"level":"error","msg":"KITEX: processing request error, remoteService=, remoteAddr=1.63.2.255:9375, error=invalid payload (first4Bytes=0x47455420, second4Bytes=0x2f646f75)","span_id":"0000000000000000","time":"2023-02-17T13:45:24Z","trace_flags":"00","trace_id":"00000000000000000000000000000000"}
+{"level":"error","msg":"KITEX: processing request error, remoteService=, remoteAddr=1.63.2.255:9430, error=invalid payload (first4Bytes=0x47455420, second4Bytes=0x2f646f75)","span_id":"0000000000000000","time":"2023-02-17T13:46:09Z","trace_flags":"00","trace_id":"00000000000000000000000000000000"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:8888","time":"2023-02-17T14:13:44Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-17T14:55:32Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:10:26+08:00"}
+{"level":"error","msg":"KITEX: server listen failed, addr=:7777 error=listen tcp :7777: bind: address already in use","time":"2023-02-20T15:17:47+08:00"}
+{"level":"error","msg":"KITEX: server start error: error=listen tcp :7777: bind: address already in use","time":"2023-02-20T15:17:47+08:00"}
+{"level":"error","msg":"listen tcp :7777: bind: address already in use","time":"2023-02-20T15:17:47+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:18:05+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:38:27+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:38:53+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:20:44+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:21:40+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:25:09+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:25:58+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:27:07+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:29:01+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:29:15+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:29:29+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:33:53+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:34:47+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:35:08+08:00"}
+{"level":"error","msg":"KITEX: server listen failed, addr=:7777 error=listen tcp :7777: bind: address already in use","time":"2023-02-20T16:45:19+08:00"}
+{"level":"error","msg":"KITEX: server start error: error=listen tcp :7777: bind: address already in use","time":"2023-02-20T16:45:19+08:00"}
+{"level":"error","msg":"listen tcp :7777: bind: address already in use","time":"2023-02-20T16:45:19+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T16:45:41+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T20:24:32+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T20:58:45+08:00"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T14:53:43Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:24:03Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:24:32Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:25:33Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:26:52Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:27:19Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:27:51Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:28:25Z"}
+{"level":"info","msg":"KITEX: server listen at addr=[::]:7777","time":"2023-02-20T15:38:58Z"}

@@ -54,7 +54,7 @@ func CancelFavorite(user_id int64, video_id int64) (status int32, err error) {
 
 	err = Db.Transaction(func(tx *gorm.DB) error {
 		//通过user_id和video_id找到要删除的favorite记录
-		if err := tx.Select("*").First(&model.Favorite{UserId: user_id, VideoId: video_id}).Scan(&favorite).Error; err != nil {
+ 		if err := tx.Select("*").First(&model.Favorite{UserId: user_id, VideoId: video_id}).Scan(&favorite).Error; err != nil {
 			return err
 		}
 		//删除这条favorite记录

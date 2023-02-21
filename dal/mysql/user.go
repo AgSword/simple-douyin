@@ -35,7 +35,7 @@ func GetUserByUsername(ctx context.Context, userName string) (*User, error) {
 
 func GetUserByIds(ctx context.Context, userID int64) (*User, error) {
 	res := &User{}
-	if err := DB.WithContext(ctx).Where("id in ?", userID).Find(&res).Error; err != nil {
+	if err := DB.WithContext(ctx).Where("id = ?", userID).Find(&res).Error; err != nil {
 		return nil, err
 	}
 	return res, nil
