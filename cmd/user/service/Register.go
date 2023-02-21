@@ -25,11 +25,12 @@ func (s *RegisterService) Run(req *user.UserRegisterRequest) (resp *user.UserReg
 	if err != nil {
 		return nil, err
 	}
-	if userByName != nil {
+	if userByName != nil && userByName.ID !=0 {	
 		return nil, errors.New("have mul users whose name are the same in db")
 	}
 	// 在数据库中创建用户信息,先添加用户名添加记录行，后添加密码
-	userInDb := mysql.User{Name: req.Username, FollowCount: 0, FollowerCount: 0}
+	var userInDb mysql.User
+	userInDb = mysql.User{Name: req.Username, FollowCount: 0, FollowerCount: 0}
 	err = mysql.CreateUser(s.ctx, &userInDb)
 	if err != nil {
 		return nil, err

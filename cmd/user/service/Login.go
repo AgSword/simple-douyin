@@ -22,7 +22,7 @@ func NewLoginService(ctx context.Context) *LoginService {
 func (s *LoginService) Run(req *user.UserLoginRequest) (resp *user.UserLoginResponse, err error) {
 	// Finish your business logic.
 	// 检查是否存在这个用户名
-	username := req.Username
+		username := req.Username
 	userInDb, err := mysql.GetUserByUsername(s.ctx, username)
 	if err != nil {
 		return nil, err

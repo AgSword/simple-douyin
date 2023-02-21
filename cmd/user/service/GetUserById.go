@@ -25,7 +25,7 @@ func (s *GetUserByIdService) Run(req *user.UserRequest) (resp *user.UserResponse
 	if err != nil {
 		return nil, err
 	}
-	if users != nil {
+	if users == nil {
 		return nil, errors.New("user no exist")
 	}
 	msg := "ok"
