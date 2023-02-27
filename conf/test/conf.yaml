@@ -21,4 +21,6 @@ redis:
   password: ""
 
 jwt:
-  signKey: "signkey"
+  signKey: "signingKey"
+
+ 

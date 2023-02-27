@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	
 	"github.com/AgSword/simpleDouyin/pkg/jwt"
 	"net"
@@ -25,8 +25,8 @@ var Jwt *jwt.JWT
 
 func main() {
 	dal.Init()
-	Jwt := jwt.NewJWT([]byte(conf.GetConf().Jwt.SignKey))
-	fmt.Println(Jwt)
+	//Jwt := jwt.NewJWT([]byte(conf.GetConf().Jwt.SignKey))
+	Jwt = jwt.NewJWT([]byte("signkey"))
 	opts := kitexInit()
 	svr := feedservice.NewServer(new(FeedServiceImpl), opts...)
 	err := svr.Run()

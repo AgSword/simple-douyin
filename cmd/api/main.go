@@ -9,6 +9,7 @@ import (
 	//"google.golang.org/genproto/googleapis/streetview/publish/v1"
 	// "github.com/Liujony/tiktokapi/cmd/api/rpc"
 	"github.com/cloudwego/hertz/pkg/common/config"
+	//"github.com/cloudwego/hertz/pkg/network/netpoll"
 	// "github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/app/server"
 	//"github.com/cloudwego/hertz/pkg/app/server/registry"
@@ -22,20 +23,9 @@ var (
 // 初始化 Hertz
 func InitHertz() *server.Hertz {
 	opts := []config.Option{server.WithHostPorts(ServiceAddr)}
-	//r, _ := etcd.NewEtcdRegistry([]string{"127.0.0.1:2379"})
-		// if err != nil {
-		// 	hlog.Fatal(err)
-		// }
-		// opts = append(opts, server.WithRegistry(r, &registry.Info{
-		// 	ServiceName: "APi",
-		// 	//Addr:        utils.NewNetAddr("tcp", ServiceAddr),
-		// 	//Weight:      10,
-		// 	//Tags:        nil,
-		// }))
-		opts =append(opts, server.WithMaxRequestBodySize(104857600))
 
-    
-	//h := server.Default(server.WithHostPorts(ServiceAddr))
+	opts =append(opts, server.WithMaxRequestBodySize(104857600))
+
 	h := server.Default(opts...)
 	return h
 
@@ -62,7 +52,10 @@ func registerGroup(h *server.Hertz) {
 	publish.POST("/action",handlers.PublishAction)
 	publish.GET("/list",handlers.PublishList)
 
-
+	relation:=douyin.Group("/relation")
+	relation.POST("/action",handlers.RelationAction)
+	relation.GET("/follow/list",handlers.RelationFollowList)
+	relation.GET("/follower/list",handlers.RelationFollowerList)
 
 }
 
