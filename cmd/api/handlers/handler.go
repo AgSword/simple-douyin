@@ -41,3 +41,15 @@ type PublishActionparam struct {
 	Data  []byte `json:"data"`
 	Title string `json:"title"`
 }
+
+type RelationActionParam struct {
+	Token string `json:"token"`
+	To_user_id  int `json:"to_user_id"`
+	Action_type int `json:"action_type"`
+}
+
+
+type RelationFollowListParam struct{
+	Token string `json:"token"`
+	User_id int
+}

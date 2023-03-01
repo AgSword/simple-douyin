@@ -14,6 +14,7 @@ import (
 	//mysql2 "github.com/AgSword/simpleDouyin/dal/mysql"
 	//user "github.com/AgSword/simpleDouyin/kitex_gen/user"
 	//"errors"
+
 )
 
 type GetUserFeedService struct {
@@ -51,7 +52,7 @@ func (s *GetUserFeedService) Run(req *feed.FeedRequest) (resp *feed.FeedResponse
 
 		userVo := feed.User{Id: users.ID, Name: users.Name, FollowCount: &users.FollowerCount, FollowerCount: &users.FollowerCount}
 		videolistVo[i] = &feed.Video{Id: videolist[i].ID, Author: &userVo,
-			PlayUrl: videolist[i].PlayUrl, CoverUrl: videolist[i].PlayUrl,
+			PlayUrl: videolist[i].PlayUrl, CoverUrl: videolist[i].CoverUrl,
 			FavoriteCount: videolist[i].FavoriteCount, CommentCount: videolist[i].CommentCount,
 			IsFavorite: false, Title: videolist[i].Title}
 	}

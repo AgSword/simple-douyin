@@ -7,7 +7,7 @@ import (
 	//service2 "github.com/AgSword/simpleDouyin/cmd/feed/service"
 	"github.com/AgSword/simpleDouyin/cmd/feed/service"
 	"github.com/cloudwego/kitex/pkg/remote/trans/nphttp2/codes"
-
+    "fmt"
 	feed "github.com/AgSword/simpleDouyin/kitex_gen/feed"
 )
 
@@ -22,6 +22,12 @@ func (s *FeedServiceImpl) GetUserFeed(ctx context.Context, req *feed.FeedRequest
 		msg := "invalid argument"
 		return &feed.FeedResponse{StatusCode: int32(codes.InvalidArgument), StatusMsg: &msg}, nil
 	}
+	fmt.Println(Jwt)
+	token,err:=Jwt.ParseToken(*req.Token)
+	if err!=nil{
+		fmt.Println(err)
+	}
+	fmt.Println(token.ID)
 	resp, err = service.NewGetUserFeedService(ctx).Run(req)
 
 	if err != nil {
