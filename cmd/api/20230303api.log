@@ -1,0 +1,24 @@
+nohup: ignoring input
+2023/03/03 12:31:09.747369 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/favorite/action/  --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.FavoriteAction (num=2 handlers)
+2023/03/03 12:31:09.747500 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/login/       --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.Login (num=2 handlers)
+2023/03/03 12:31:09.747521 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/register/    --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.Register (num=2 handlers)
+2023/03/03 12:31:09.747534 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/user/             --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.GetUserById (num=2 handlers)
+2023/03/03 12:31:09.747546 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/feed/             --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.GetUserFeed (num=2 handlers)
+2023/03/03 12:31:09.747563 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/publish/action/   --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.PublishAction (num=2 handlers)
+2023/03/03 12:31:09.747577 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/publish/list      --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.PublishList (num=2 handlers)
+2023/03/03 12:31:09.747588 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/relation/action/  --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.RelationAction (num=2 handlers)
+2023/03/03 12:31:09.747600 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follow/list --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.RelationFollowList (num=2 handlers)
+2023/03/03 12:31:09.747618 engine.go:617: [Debug] HERTZ: Method=GET    absolutePath=/douyin/relation/follower/list --> handlerName=github.com/AgSword/simpleDouyin/cmd/api/handlers.RelationFollowerList (num=2 handlers)
+2023/03/03 12:31:09.747725 engine.go:389: [Info] HERTZ: Using network library=netpoll
+2023/03/03 12:31:09.748059 transport.go:109: [Info] HERTZ: HTTP server listening on address=[::]:8080
+2023/03/03 12:32:49 readv(fd=13) failed: connection reset by peer
+2023/03/03 12:32:49 readv(fd=11) failed: connection reset by peer
+2023/03/03 12:32:49 readv(fd=14) failed: connection reset by peer
+2023/03/03 12:35:13 readv(fd=10) failed: connection reset by peer
+2023/03/03 12:35:13 readv(fd=12) failed: connection reset by peer
+2023/03/03 12:35:13 readv(fd=11) failed: connection reset by peer
+2023/03/03 12:40:04 readv(fd=10) failed: connection reset by peer
+2023/03/03 12:40:04 readv(fd=12) failed: connection reset by peer
+<nil>
+2023/03/03 12:58:46 readv(fd=10) failed: connection reset by peer
+2023/03/03 12:58:46 readv(fd=12) failed: connection reset by peer

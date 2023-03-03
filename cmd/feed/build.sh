@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-RUN_NAME="user"
+RUN_NAME="feed"
 
 mkdir -p output/bin output/conf
 cp script/* output/

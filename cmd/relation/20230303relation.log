@@ -1,0 +1,8 @@
+nohup: ignoring input
+2023/03/03 12:46:11.126245 server.go:81: [Info] KITEX: server listen at addr=[::]:5555
+
+2023/03/03 12:48:36 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:33
+[0m[33m[9.084ms] [34;1m[rows:0][0m UPDATE `user` SET `follower_count`=1,`updated_at`='2023-03-03 12:48:36.653' WHERE id = 0 AND `user`.`deleted_at` IS NULL
+
+2023/03/03 12:48:36 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:44
+[0m[33m[9.081ms] [34;1m[rows:1][0m UPDATE `user` SET `follow_count`=1,`updated_at`='2023-03-03 12:48:36.68' WHERE id = 24 AND `user`.`deleted_at` IS NULL
