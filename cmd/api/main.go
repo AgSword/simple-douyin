@@ -24,8 +24,7 @@ var (
 func InitHertz() *server.Hertz {
 	opts := []config.Option{server.WithHostPorts(ServiceAddr)}
 
-	opts =append(opts, server.WithMaxRequestBodySize(104857600))
-
+	opts =append(opts,server.WithMaxRequestBodySize(104857600))
 	h := server.Default(opts...)
 	return h
 
@@ -49,11 +48,11 @@ func registerGroup(h *server.Hertz) {
 	feed.GET("/", handlers.GetUserFeed)
 
 	publish:=douyin.Group("/publish")
-	publish.POST("/action",handlers.PublishAction)
+	publish.POST("/action/",handlers.PublishAction)
 	publish.GET("/list",handlers.PublishList)
 
 	relation:=douyin.Group("/relation")
-	relation.POST("/action",handlers.RelationAction)
+	relation.POST("/action/",handlers.RelationAction)
 	relation.GET("/follow/list",handlers.RelationFollowList)
 	relation.GET("/follower/list",handlers.RelationFollowerList)
 

@@ -12,7 +12,7 @@ import (
 // Client is designed to provide IDL-compatible methods with call-option parameter for kitex framework.
 type Client interface {
 	PublishAction(ctx context.Context, req *publish.PublishActionRequest, callOptions ...callopt.Option) (r *publish.PublishActionResponse, err error)
-	PublishList(ctx context.Context, req *publish.PublishListRequest, callOptions ...callopt.Option) (r *publish.PublishListResponse, err error)
+		PublishList(ctx context.Context, req *publish.PublishListRequest, callOptions ...callopt.Option) (r *publish.PublishListResponse, err error)
 }
 
 // NewClient creates a client for the service defined in IDL.

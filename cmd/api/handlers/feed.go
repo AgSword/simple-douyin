@@ -44,15 +44,17 @@ func GetUserFeed(ctx context.Context, c *app.RequestContext)  {
 		LatestTime: &feedVar.Latest_time,
 		Token:  &feedVar.Token,	
 	})
-	if err != nil {
-		msg := "Invalid Token feed"
-		SendResponse(c, &feed.FeedResponse{
-			StatusCode: int32(3), 
-			StatusMsg:  &msg,	
+	// if err != nil {
+	// 	msg := "GetUserFeed err"
+	// 	//这还有点问题
 
-		})
-		return
-	}
+	// 	SendResponse(c, &feed.FeedResponse{
+	// 		StatusCode: int32(3), 
+	// 		StatusMsg:  &msg,	
+
+	// 	})
+	// 	return
+	// }
 	SendResponse(c, resp)
 
 }

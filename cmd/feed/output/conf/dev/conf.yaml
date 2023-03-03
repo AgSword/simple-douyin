@@ -6,7 +6,7 @@ kitex:
   log_max_size: 10
   log_max_age: 3
   log_max_backups: 50
-
+#etcd
 registry:
   registry_address:
     - 127.0.0.1:2379
@@ -14,9 +14,9 @@ registry:
   password: ""
 
 mysql:
-  dsn: "root:Sss15946768062@tcp(47.100.224.26:3306)/tiktok8062?charset=utf8&parseTime=True&loc=Local"
+  dsn: "gorm:gorm@tcp(47.100.224.26:3306)/gorm?charset=utf8&parseTime=True&loc=Local"
 redis:
-  address: "139.196.107.129:6379"
+  address: "47.100.224.26:6379"
   username: ""
   password: ""
 

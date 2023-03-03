@@ -1,0 +1,2 @@
+nohup: ignoring input
+2023/03/03 12:35:31.647117 server.go:81: [Info] KITEX: server listen at addr=[::]:6666

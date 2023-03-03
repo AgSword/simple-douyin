@@ -1,0 +1,47 @@
+nohup: ignoring input
+2023/03/03 18:33:51.792328 server.go:81: [Info] KITEX: server listen at addr=[::]:6666
+2023/03/03 19:05:48.647252 utils.go:61: [Info] upload 7f962ca9-72bd-4153-a743-6282ccea4f52.mp4 of bytes 2890190 successfully
+2023/03/03 19:05:48 compiled command: ffmpeg -i http://47.100.224.26:9000/tiktok-video/7f962ca9-72bd-4153-a743-6282ccea4f52.mp4 -filter_complex [0]select=gte(n\,1)[s0] -map [s0] -f image2 -vcodec mjpeg -vframes 1 pipe:
+ffmpeg version 3.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --prefix=/usr/local/ffmpeg --disable-yasm
+  libavutil      55. 27.100 / 55. 27.100
+  libavcodec     57. 48.101 / 57. 48.101
+  libavformat    57. 40.101 / 57. 40.101
+  libavdevice    57.  0.101 / 57.  0.101
+  libavfilter     6. 46.102 /  6. 46.102
+  libswscale      4.  1.100 /  4.  1.100
+  libswresample   2.  1.100 /  2.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'http://47.100.224.26:9000/tiktok-video/7f962ca9-72bd-4153-a743-6282ccea4f52.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.45.100
+  Duration: 00:00:08.31, start: 0.000000, bitrate: 2782 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 576x1024 [SAR 1:1 DAR 9:16], 2802 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+    Stream #0:1(und): Audio: aac (HE-AACv2) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 32 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+[swscaler @ 0x5610854ff0a0] deprecated pixel format used, make sure you did set range correctly
+[image2 @ 0x5610854fe7a0] Using AVStream.codec to pass codec parameters to muxers is deprecated, use AVStream.codecpar instead.
+Output #0, image2, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf57.40.101
+    Stream #0:0: Video: mjpeg, yuvj420p(pc), 576x1024 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn, 30 tbc (default)
+    Metadata:
+      encoder         : Lavc57.48.101 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+Stream mapping:
+  Stream #0:0 (h264) -> select
+  select -> Stream #0:0 (mjpeg)
+Press [q] to stop, [?] for help
+frame=    1 fps=0.0 q=7.2 Lsize=N/A time=00:00:00.03 bitrate=N/A speed=0.593x    
+video:83kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+2023/03/03 19:05:49.413309 utils.go:61: [Info] upload e019bcd2-02b2-4cbc-9ec2-187a7163214a.jpg of bytes 103988 successfully

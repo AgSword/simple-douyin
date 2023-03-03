@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"sync"
-
+    "fmt"
 	"gopkg.in/validator.v2"
 	"gopkg.in/yaml.v2"
 
@@ -89,8 +89,10 @@ func initConf() {
 
 func GetEnv() string {
 	e := os.Getenv("GO_ENV")
+	fmt.Printf("env8062:%v\n", e)
 	if len(e) == 0 {
-		return "test"
+		//return "test"
+       return "dev"
 	}
 	return e
 }

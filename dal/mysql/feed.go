@@ -30,7 +30,7 @@ func GetUserFeeds(ctx context.Context, latestTime *int64) ([]*Video, error) {
 
 	if err := DB.WithContext(ctx).
 		Where("created_at < ?", latestTime).
-		Order("created_at asc").
+		Order("created_at desc").
 		//Limit(config.FeedListLength).
 		Find(&res).
 		Error; err != nil {

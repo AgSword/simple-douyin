@@ -1,0 +1,32 @@
+nohup: ignoring input
+2023/03/03 18:17:05.226267 server.go:81: [Info] KITEX: server listen at addr=[::]:5555
+
+2023/03/03 18:34:20 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:109
+[0m[33m[9.275ms] [34;1m[rows:1][0m SELECT `to_user_id` FROM `relation` WHERE user_id = 23 AND `relation`.`deleted_at` IS NULL
+
+2023/03/03 19:05:05 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:109
+[0m[33m[9.196ms] [34;1m[rows:1][0m SELECT `to_user_id` FROM `relation` WHERE user_id = 23 AND `relation`.`deleted_at` IS NULL
+
+2023/03/03 19:05:09 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:33
+[0m[33m[8.889ms] [34;1m[rows:1][0m UPDATE `user` SET `follower_count`=2,`updated_at`='2023-03-03 19:05:09.95' WHERE id = 15 AND `user`.`deleted_at` IS NULL
+
+2023/03/03 19:05:09 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:44
+[0m[33m[8.927ms] [34;1m[rows:1][0m UPDATE `user` SET `follow_count`=2,`updated_at`='2023-03-03 19:05:09.977' WHERE id = 23 AND `user`.`deleted_at` IS NULL
+
+2023/03/03 19:05:12 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:109
+[0m[33m[9.277ms] [34;1m[rows:2][0m SELECT `to_user_id` FROM `relation` WHERE user_id = 23 AND `relation`.`deleted_at` IS NULL
+
+2023/03/03 19:06:46 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:33
+[0m[33m[8.855ms] [34;1m[rows:0][0m UPDATE `user` SET `follower_count`=1,`updated_at`='2023-03-03 19:06:46.346' WHERE id = 0 AND `user`.`deleted_at` IS NULL
+
+2023/03/03 19:06:46 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:44
+[0m[33m[8.878ms] [34;1m[rows:1][0m UPDATE `user` SET `follow_count`=1,`updated_at`='2023-03-03 19:06:46.372' WHERE id = 25 AND `user`.`deleted_at` IS NULL
+
+2023/03/03 19:07:34 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:109
+[0m[33m[9.269ms] [34;1m[rows:2][0m SELECT `to_user_id` FROM `relation` WHERE user_id = 23 AND `relation`.`deleted_at` IS NULL
+
+2023/03/03 19:07:36 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:109
+[0m[33m[9.258ms] [34;1m[rows:2][0m SELECT `to_user_id` FROM `relation` WHERE user_id = 23 AND `relation`.`deleted_at` IS NULL
+
+2023/03/03 19:07:37 [32m/root/go/src/ShiHaoran/gitPush0220/cmd/relation/packages/relationDB/relation.go:139
+[0m[33m[9.213ms] [34;1m[rows:0][0m SELECT `user_id` FROM `relation` WHERE to_user_id = 23 AND `relation`.`deleted_at` IS NULL

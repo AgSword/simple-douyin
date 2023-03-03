@@ -16,9 +16,6 @@ registry:
 mysql:
   dsn: "root:Sss15946768062@tcp(47.100.224.26:3306)/tiktok8062?charset=utf8&parseTime=True&loc=Local"
 redis:
-  address: "139.196.107.129:6379"
+  address: "47.100.224.26:6379" 
   username: ""
   password: ""
-
-jwt:
-  signKey: "signkey"
