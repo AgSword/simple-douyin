@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="344c15ca-cba6-4b9f-a53d-e87e1225801e" name="root">
-        <fileTransfer rootFolder="/home/ubuntu/Douyin" accessType="SFTP" host="81.68.226.163" port="22" sshConfigId="13d69d22-9e90-4b60-964f-2d9837a95b69" sshConfig="ubuntu@81.68.226.163:22 password">
+        <fileTransfer accessType="SFTP" host="81.68.226.163" port="22" sshConfigId="13d69d22-9e90-4b60-964f-2d9837a95b69" sshConfig="ubuntu@81.68.226.163:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
