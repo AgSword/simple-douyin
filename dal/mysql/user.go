@@ -13,7 +13,7 @@ type User struct {
 	ID            int64          `gorm:"column:id" json:"id"`
 	Name          string         `gorm:"column:name" json:"name"`
 	Password      string         `gorm:"column:password" json:"password"`
-	FollowCount   int64          `gorm:"column:follow_count" json:"follow_count"`
+	FollowCount   int64          `gorm:"column:following_count" json:"follow_count"`
 	FollowerCount int64          `gorm:"column:follower_count" json:"follower_count"`
 	CreatedAt     time.Time      `gorm:"column:created_at;not null;default:CURRENT_TIMESTAMP" json:"created_at"`
 	UpdatedAt     time.Time      `gorm:"column:updated_at;not null" json:"updated_at"`
